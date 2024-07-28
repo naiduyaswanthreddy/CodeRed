@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f3f3;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 0 20px;
+        }
+
+        .menu {
+            padding: 0 20px;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .card {
+            margin: 0 10px; /* Adjusted margin */
+            position: relative;
+            width: 300px; /* Increased width */
+            height: 150px; /* Increased height */
+            perspective: 1000px;
+            overflow: visible;
+        }
+
+        .card-inner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s, z-index 0.5s; /* Added transition for z-index */
+            transform-style: preserve-3d;
+            z-index: 1; /* Set initial z-index */
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(-180deg); /* Change rotation direction to -180deg */
+            z-index: 2; /* Bring the back of the card forward */
+        }
+
+        .card-front,
+        .card-back {
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px; /* Increased padding */
+            box-sizing: border-box;
+            border-radius: 10px; /* Added border radius */
+            background-color: #03c9a9; /* Added background color */
+            color: #fff; /* Added text color */
+        }
+
+        .card-back {
+            transform: rotateY(-180deg); /* Adjusted rotation for back side */
+        }
+
+        .button {
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 10px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="PAGE-2.html" class="logo">Your Logo</a>
+        <nav class="menu">
+            <a href="#">Past Rides</a>
+            <a href="#">Help</a>
+            <a href="#">Settings</a>
+            <a href="#">My Profile</a>
+        </nav>
+    </header>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <span>Available Vehicles: 
+                        Choose from our available vehicles</span>
+                </div>
+                <div class="card-back">
+                    <a href="PAGE-3-1.html" class="button">View Vehicles</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <span>Register as a Poolable: 
+                        Register with your college email</span>
+                </div>
+                <div class="card-back">
+                    <a href="PAGE-3-2.html" class="button">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-container"> <!-- New card container for flip card button -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <span> Bike,/Scooter Rentals</span>
+                </div>
+                <div class="card-back">
+                    <a href="PAGE-3-3.html" class="button">Inter Campus Bike Rentals</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

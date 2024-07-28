@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f3f3;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 0 20px;
+        }
+
+        .menu {
+            padding: 0 20px;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .card {
+            margin: 0 10px; /* Adjusted margin */
+            position: relative;
+            width: 300px; /* Increased width */
+            height: 150px; /* Increased height */
+            perspective: 1000px;
+            overflow: visible;
+        }
+
+        .card-inner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s, z-index 0.5s; /* Added transition for z-index */
+            transform-style: preserve-3d;
+            z-index: 1; /* Set initial z-index */
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+            z-index: 2; /* Bring the back of the card forward */
+        }
+
+        .card-front,
+        .card-back {
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px; /* Increased padding */
+            box-sizing: border-box;
+            border-radius: 10px; /* Added border radius */
+            background-color: #03c9a9; /* Added background color */
+            color: #fff; /* Added text color */
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+        }
+
+        .button {
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 10px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="PAGE-1.HTML" class="logo">Your Logo</a>
+        <nav class="menu">
+            <a href="#">Past Rides</a>
+            <a href="#">Help</a>
+            <a href="#">Settings</a>
+            <a href="#">My Profile</a>
+        </nav>
+    </header>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <span>Login: 
+                        Kindly Use your registered college Email</span>
+                </div>
+                <div class="card-back">
+                    <a href="login.html" class="button">Login</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <span>Sign Up: 
+                        Kindly register using your college Email</span>
+                </div>
+                <div class="card-back">
+                    <a href="signup.html" class="button">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-container"> <!-- New card container for guest code text section -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <span>Guest Code:</span>
+                </div>
+                <div class="card-back">
+                    <form action="/submit_guest_code" method="post"> <!-- Added form element -->
+                        <input type="text" name="guest_code" placeholder="Enter guest code" class="button"> <!-- Added input field -->
+                        <input type="submit" value="Submit" class="button"> <!-- Added submit button -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

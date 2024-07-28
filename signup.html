@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <header>
+        <a href="PAGE-2.html" class="logo">Your Logo</a>
+        <nav class="menu">
+            <a href="#">Past Rides</a>
+            <a href="#">Help</a>
+            <a href="#">Settings</a>
+            <a href="#">My Profile</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="form">
+            <h2>Signup Here</h2>
+            <input type="text" name="name" id="name" placeholder="Enter name">
+            <input type="text" name="regNo" id="regNo" placeholder="Enter college registration number">
+            <input type="email" name="email" id="email" placeholder="Enter college email">
+            <input type="password" name="password" id="password" placeholder="Enter password">
+            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm password">
+            <input type="date" name="dob" id="dob" placeholder="Enter date of birth">
+            <select name="gender" id="gender">
+                <option value="">Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <button class="btnn" onclick="redirectToPage2()">Signup</button>
+            <p class="link">Already have an account? </p>
+            <p class="liw"><a href="#" class="login-link">Login here</a></p>
+           </div>
+        </div>
+    </div>
+
+    <script src="signup.js"></script>
+
+    <script>
+        function redirectToPage2() {
+            window.location.href = "PAGE-2.html";
+        }
+    </script>
+</body>
+</html>

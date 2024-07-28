@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styletran.css">
+    <link rel="stylesheet" href="styles1.css"> <!-- Added the same stylesheet here for consistency -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="PAGE-2.html" class="logo">Your Logo</a>
+        <nav class="menu">
+            <a href="#">Past Rides</a>
+            <a href="#">Help</a>
+            <a href="#">Settings</a>
+            <a href="#">My Profile</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="form">
+            <h2>Login Here</h2>
+            <input type="email" name="email" id="email" placeholder="Enter email">
+            <input type="password" name="password" id="password" placeholder="Enter password">
+            <button class="btnn" onclick="redirectToPage2()">Login</button>
+          
+            <p class="link">Don't have an account? </p>
+            <p class="liw"><a href="#" class="signup-link">Signup here</a></p>
+            <p class="link2">Login with</p>
+
+
+            <div class="icon">
+                <a href="https://www.facebook.com/" class="social-link1"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="https://www.whatsapp.com/" class="social-link2"><i class="fab fa-whatsapp fa-2x" ></i></a>
+                <a href="https://www.google.com/" class="social-link3"><i class="fab fa-google fa-2x"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+
+    <script>
+        function redirectToPage2() {
+            window.location.href = "PAGE-2.html";
+        }
+    </script>
+</body>
+</html>

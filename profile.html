@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Profile</h1>
+        <div class="profile-pic">
+            <img src="background.jpg" alt="Profile Picture">
+        </div>
+        <div class="profile-info">
+            <div class="info-item">
+                <label for="fullname">Full Name:</label>
+                <span id="fullname">John Doe</span>
+                <button class="edit-btn" onclick="editField('fullname')">Edit</button>
+            </div>
+            <div class="info-item">
+                <label for="location">Location:</label>
+                <span id="location">New York</span>
+                <button class="edit-btn" onclick="editField('location')">Edit</button>
+            </div>
+            <div class="info-item">
+                <label for="email">Email Address:</label>
+                <span id="email">johndoe@example.com</span>
+                <button class="edit-btn" onclick="editField('email')">Edit</button>
+            </div>
+            <div class="info-item">
+                <label for="nationality">Nationality:</label>
+                <span id="nationality">American</span>
+                <button class="edit-btn" onclick="editField('nationality')">Edit</button>
+            </div>
+            <div class="info-item">
+                <label for="dob">Date of Birth:</label>
+                <span id="dob">January 1, 1990</span>
+                <button class="edit-btn" onclick="editField('dob')">Edit</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function editField(fieldId) {
+            const field = document.getElementById(fieldId);
+            const newValue = prompt(`Enter new value for ${fieldId}:`, field.textContent);
+            if (newValue !== null && newValue.trim() !== '') {
+                field.textContent = newValue;
+            }
+        }
+    </script>
+</body>
+</html>

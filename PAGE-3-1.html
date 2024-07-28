@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="PAGE-2.html" class="logo">Your Logo</a>
+        <nav class="menu">
+            <a href="#">Past Rides</a>
+            <a href="#">Help</a>
+            <a href="#">Settings</a>
+            <a href="#">My Profile</a>
+        </nav>
+    </header>
+    <div id="container">
+        <select id="gender">
+            <option value="" disabled selected>Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="any">Any</option>
+        </select>
+        <div id="main-content">
+            <form>
+                <label for="passengers">No. of passengers:</label><br>
+                <input type="number" id="passengers" name="passengers" min="1" onchange="checkPassengerCount()"><br>
+                <label>Available options:</label><br>
+                <!-- Add your options here -->
+                <div id="vehicle-options">
+                    <input type="radio" id="bike" name="vehicle" value="bike">
+                    <label for="bike">Bike</label>
+                    <input type="radio" id="car" name="vehicle" value="car">
+                    <label for="car">Car</label>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div id="available-rides"></div>
+    <script src="script.js"></script>
+</body>
+</html>
